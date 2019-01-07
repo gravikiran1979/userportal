@@ -1,0 +1,29 @@
+<div class="container-fluid">
+<div class="col-md-offset-1" style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="btn btn-outline-info" style="border-bottom: 0em; border-bottom-left-radius: 0em; border-bottom-right-radius: 0em;" 
+            routerLink="/users">List Users<span class="sr-only">(current)</span> </a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-info" style="border-bottom: 0em; border-bottom-left-radius: 0em; border-bottom-right-radius: 0em;" 
+            routerLink="/add">Add User<span class="sr-only">(current)</span> </a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" aria-label="Enter emailId" #emailIdInput>
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="onSearch(emailIdInput)" type="submit">Search User</button>
+    </form>
+  </div>
+</nav>
+<br/>
+<router-outlet></router-outlet>
+</div>
+
